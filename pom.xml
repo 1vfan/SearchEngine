@@ -7,6 +7,9 @@
     <groupId>com.stefan</groupId>
     <artifactId>spring-boot-all</artifactId>
     <version>1.0.0-RELEASE</version>
+    <modules>
+        <module>spring-boot-dynamic-datasource</module>
+    </modules>
 
     <packaging>pom</packaging>
 
