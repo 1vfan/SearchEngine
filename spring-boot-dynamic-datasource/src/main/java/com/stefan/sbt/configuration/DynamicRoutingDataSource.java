@@ -6,7 +6,7 @@ import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 /**
  * @Description: 代理类 {@link AbstractRoutingDataSource}，重写方法根据当前线程中的key路由获取到对应的数据源
  * @Author: Stefan
- * @Date: 2019/10/8 7:08 PM
+ * @Date: 2019/7/11 7:08 PM
  */
 public class DynamicRoutingDataSource extends AbstractRoutingDataSource {
 

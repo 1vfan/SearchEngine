@@ -13,9 +13,9 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @Description: 注入多数据源
+ * @Description: 注入数据源交由Mybatis {@link SqlSessionFactoryBean} 管理
  * @Author: Stefan
- * @Date: 2019/10/8 7:27 PM
+ * @Date: 2019/7/11 7:27 PM
  */
 @Configuration
 @AutoConfigureAfter({DruidConfiguration.class})
@@ -27,7 +27,7 @@ public class MybatisConfiguration {
     @Resource
     private DataSource slave1DataSource;
 
-    /** 将多数据源Bean与SqlSessionFactory关联 */
+    /** 将多数据源Bean与sqlSessionFactoryBean关联 */
     @Bean(name = "sqlSessionFactory")
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
@@ -35,6 +35,7 @@ public class MybatisConfiguration {
         return sqlSessionFactoryBean.getObject();
     }
 
+    /** 缓存数据源 */
     @Bean(name = "dynamicRoutingDataSource")
     public DynamicRoutingDataSource dataSource() {
         DynamicRoutingDataSource proxy = new DynamicRoutingDataSource();

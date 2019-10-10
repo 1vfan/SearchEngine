@@ -16,9 +16,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 
 /**
- * @Description: 定义多数据源Bean
+ * @Description: {@link DataSourceBuilder} 解析连接池配置创建Druid数据源并配置监控台
  * @Author: Stefan
- * @Date: 2019/10/8 6:34 PM
+ * @Date: 2019/7/11 6:34 PM
  */
 @Slf4j
 @Configuration

@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 
 /**
- * @Description: 测试
+ * @Description: 测试Service，省略接口
  * @Author: Stefan
- * @Date: 2019/10/9 9:31 AM
+ * @Date: 2019/7/11 9:31 AM
  */
 @Service
 public class DemoService {

@@ -12,37 +12,35 @@ import org.springframework.stereotype.Component;
 /**
  * @Description: 配置切面拦截器，增强被注解的方法
  * @Author: Stefan
- * @Date: 2019/10/9 12:11 PM
+ * @Date: 2019/7/11 12:11 PM
  */
 @Slf4j
 @Aspect
 @Component
 public class DynamicDataSourceInterceptor {
 
-    /** 织入点语法，在标注的方法之前之后执行相应操作 */
+    /** 织入，在注解标注的方法前后执行相应操作 */
     @Around("@annotation(dynamic))")
     public Object proceed(ProceedingJoinPoint proceedingJoinPoint, Dynamic dynamic) throws Throwable {
         try {
-            log.info("<----router data source connection---->");
-            getDynamicDataSource(dynamic);
-            //引用注解的原方法继续执行完毕
+            setDynamicDataSource(dynamic);
             Object result = proceedingJoinPoint.proceed();
             return result;
         }finally {
-            //保证下次进程默认还是master数据源
+            //保证下一次进程使用默认数据源
             DynamicRoutingDataSource.clearDataSourceKey();
-            log.info("<----restore data source connection--->");
+            log.info("Clear DataSourceKey in TheardLocal");
         }
     }
 
-    /** 匹配则设置，否则使用默认数据源 */
-    private void getDynamicDataSource(Dynamic dynamic) {
+    /** 匹配则使用注解设置，否则使用默认数据源 */
+    private void setDynamicDataSource(Dynamic dynamic) {
         String value = dynamic.value();
-        log.info("value: {}", value);
         for(DynamicDataSourceEnum ddse : DynamicDataSourceEnum.values()) {
-            log.info("DynamicDataSourceEnum: {}", ddse);
             if(value.equalsIgnoreCase(ddse.toString())) {
+                log.info("Dynamic Annotation value is {}", ddse);
                 DynamicRoutingDataSource.setDataSourceKey(ddse);
+                break;
             }
         }
     }

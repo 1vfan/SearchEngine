@@ -3,7 +3,7 @@ package com.stefan.sbt.domain.enums;
 /**
  * @Description: 多数据源类型枚举类
  * @Author: Stefan
- * @Date: 2019/10/8 6:56 PM
+ * @Date: 2019/7/11 6:56 PM
  */
 public enum DynamicDataSourceEnum {
 

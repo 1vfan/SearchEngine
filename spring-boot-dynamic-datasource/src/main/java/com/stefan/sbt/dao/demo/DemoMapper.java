@@ -5,9 +5,9 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 /**
- * @Description: 测试
+ * @Description: 测试Mapper
  * @Author: Stefan
- * @Date: 2019/10/9 4:35 PM
+ * @Date: 2019/7/11 4:35 PM
  */
 @Mapper
 public interface DemoMapper {
