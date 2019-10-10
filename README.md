@@ -21,6 +21,8 @@ Dynamic Route DataSource to Create SqlSessionFactory with custom Annotation.
 
 ## spring-boot-unified-response
 
+Unified Global ResponseBody for different Result with custom Exception.
+
 - Create unified and global response Entity and Enum.
 
 - Extends RuntimeException to Create Custom Exception.
