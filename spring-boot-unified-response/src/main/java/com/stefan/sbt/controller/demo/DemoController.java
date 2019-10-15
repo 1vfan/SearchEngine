@@ -20,12 +20,13 @@ public class DemoController {
     @GetMapping(value = "/demo")
     public UnifiedResult demo() {
         /** 自定义异常 */
-        if(1 < 2) {
+        if(false) {
             log.error("Custom 1 Exception");
             throw new CustomException(UnifiedResponseStatusEnum.ERROR_CUSTOM_1);
         }
         /** 一般运行时异常 */
-        int a = 1/0;
+        //int a = 1/0;
+        /** 返回请求成功响应体 */
         log.info("request success");
         return UnifiedResultUtil.success("success result data");
     }

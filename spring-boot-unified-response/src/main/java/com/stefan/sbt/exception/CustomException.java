@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CustomException extends RuntimeException {
-
+    /** 自定义属性，传递异常信息 */
     private UnifiedResponseStatusEnum urse;
 
 }

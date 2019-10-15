@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @Description: 全局异常处理类
+ * @Description: 自定义全局异常处理类
  * @Author: Stefan
  * @Date: 2019/7/13 8:22 PM
  */

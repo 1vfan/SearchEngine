@@ -14,12 +14,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UnifiedResult<T> {
 
+    /** 响应码 */
     private Integer code;
-
+    /** 响应状态 */
     private String status;
-
+    /** 响应信息 */
     private String msg;
-
+    /** 响应结果 */
     private T data;
 
 }
