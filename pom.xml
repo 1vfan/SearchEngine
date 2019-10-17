@@ -9,6 +9,7 @@
     <version>1.0.0-RELEASE</version>
     <modules>
         <module>spring-boot-dynamic-datasource</module>
+        <module>spring-boot-extension-validator</module>
         <module>spring-boot-unified-response</module>
     </modules>
 

@@ -1,6 +1,7 @@
 # spring-boot-all
 
 - spring-boot-dynamic-datasource
+- spring-boot-extension-validator
 - spring-boot-unified-response
 
 ## spring-boot-dynamic-datasource
@@ -18,6 +19,18 @@ Dynamic Route DataSource to Create SqlSessionFactory with custom Annotation.
 - Configure AOP to Intercept @Dynamic and set value to ThreadLocal.
 
 - Use @Dynamic to mark @Service method.
+
+## spring-boot-extension-validator
+
+DIY Constraint Validator to Validate Request Parameter with custom Constraint Annotation.
+
+- Extension MethodValidationPostProcessor to support fail_fast model.
+
+- Create custom Annotation(@GeoLonCheck).
+
+- Implements ConstraintValidator to Configure Validation logic.
+
+- Use @NotNull and @GeoLonCheck to mark Field.
 
 ## spring-boot-unified-response
 
