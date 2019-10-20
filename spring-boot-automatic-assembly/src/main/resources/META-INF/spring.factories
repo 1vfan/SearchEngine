@@ -1,0 +1,3 @@
+# 自定义EnableAutoConfiguration扫描组件
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.stefan.configuration.auto.SpringDemoAutoConfiguration

@@ -8,6 +8,7 @@
     <artifactId>spring-boot-all</artifactId>
     <version>1.0.0-RELEASE</version>
     <modules>
+        <module>spring-boot-automatic-assembly</module>
         <module>spring-boot-dynamic-datasource</module>
         <module>spring-boot-extension-validator</module>
         <module>spring-boot-unified-response</module>
