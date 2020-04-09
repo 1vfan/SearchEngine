@@ -1,0 +1,7 @@
+org.springframework.context.ApplicationContextInitializer=\
+com.stefan.context.initializer.AfterApplicationContextInitializer,\
+com.stefan.context.initializer.BeforeApplicationContextInitializer
+
+org.springframework.context.ApplicationListener=\
+com.stefan.context.listener.AfterApplicationListener,\
+com.stefan.context.listener.BeforeApplicationListener

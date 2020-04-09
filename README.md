@@ -1,8 +1,23 @@
 # spring-boot-all
 
+- spring-boot-automatic-assembly
 - spring-boot-dynamic-datasource
 - spring-boot-extension-validator
 - spring-boot-unified-response
+
+## spring-boot-automatic-assembly
+
+Auto Assembly to Configure EnableAutoConfiguration.class with custom Annotation.
+
+- Use @Configuration or Create custom Annotation(@SpringDemoConfiguration).
+
+- Implements ImportSelector to Create custom Annotation(@EnableDemoConfiguration).
+ 
+- Implements Condition to Create custom Annotation(@ConditionalOnDemo).
+
+- Use the above custom Annotation to Mark SpringDemoAutoConfiguration.
+
+- Create custom META-INF/spring.factories and configure EnableAutoConfiguration.class.
 
 ## spring-boot-dynamic-datasource
 
